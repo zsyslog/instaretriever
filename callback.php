@@ -34,7 +34,7 @@ if (isset($_REQUEST['code'])) {
     <?php print_r($data->access_token); ?>
     </pre>
     <?php
-    $url = "https://api.instagram.com/v1/users/7419994/media/recent/?access_token=".$data->access_token;
+    $url = "https://api.instagram.com/v1/users/".USER_ID."/media/recent/?access_token=".$data->access_token;
     $response_json = file_get_contents($url);
     $insta_response = json_decode($response_json);
     ?>
